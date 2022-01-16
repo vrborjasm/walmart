@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import SearchBar from "../SearchBar";
 
 const WrapNavbar = styled.div`
   width: 100%;
@@ -79,7 +80,9 @@ const NavBar = () => {
         </ContainerInfo>
       </WrapInfo>
       <WrapAction>
-        <ContainerAction></ContainerAction>
+        <ContainerAction>
+          <SearchBar />
+        </ContainerAction>
       </WrapAction>
     </WrapNavbar>
   );
