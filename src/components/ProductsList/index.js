@@ -9,43 +9,8 @@ const ContainerList = styled.div`
   justify-content: space-evenly;
 `;
 
-const ProductsList = () => {
-  const products = [
-    {
-      _id: "61e34b52cbc38c3a3595f429",
-      id: 1,
-      brand: "ooy eqrceli",
-      description: "rlñlw brhrka",
-      image: "www.lider.cl/catalogo/images/whiteLineIcon.svg",
-      price: 498724,
-      finalPrice: 200000,
-    },
-    {
-      _id: "61e34b52cbc38c3a3595f42b",
-      id: 2,
-      brand: "dsaasd",
-      description: "zlrwax bñyrh",
-      image: "www.lider.cl/catalogo/images/babyIcon.svg",
-      price: 130173,
-    },
-    {
-      _id: "61e34b52cbc38c3a3595f42d",
-      id: 3,
-      brand: "weñxoab",
-      description: "hqhoy qacirk",
-      image: "www.lider.cl/catalogo/images/homeIcon.svg",
-      price: 171740,
-    },
-    {
-        _id: "61e34b52cbc38c3a3595f42d",
-        id: 3,
-        brand: "weñxoab",
-        description: "hqhoy qacirk",
-        image: "www.lider.cl/catalogo/images/homeIcon.svg",
-        price: 171740,
-      },
-  ];
-
+const ProductsList = ({products}) => {
+  
   return (
     <ContainerList>
       {products.map((product) => (

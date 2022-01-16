@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 
 const WrapSearchBar = styled.div`
@@ -35,7 +35,19 @@ const ContainerSearchBar = styled.div`
   }
 `;
 
-const SearchBar = () => {
+const SearchBar = ({handleSearchPagination, setSearchValuePagination}) => {
+
+  const [searchValue, setSearchValue] = useState("")
+
+  const handleSearchValue = (e) => {
+    setSearchValue(e.target.value);
+    setSearchValuePagination(e.target.value);
+  }
+
+  const handleGetSearch = () => {
+    handleSearchPagination(1,searchValue);
+  }
+
   return (
     <WrapSearchBar>
       <ContainerSearchBar>
@@ -44,10 +56,13 @@ const SearchBar = () => {
           type="text"
           name="searchQueryInput"
           placeholder="¿Qué estás buscando?"
+          value={searchValue}
+          onChange={handleSearchValue}
         />
         <button
           id="searchQuerySubmit"
           name="searchQuerySubmit"
+          onClick={handleGetSearch}
         >
           <svg style={{ width: "24px", height: "24px" }} viewBox="0 0 24 24">
             <path

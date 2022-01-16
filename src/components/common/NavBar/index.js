@@ -57,7 +57,7 @@ const ContainerAction = styled.div`
   display: flex;
 `;
 
-const NavBar = () => {
+const NavBar = ({handleSearchPagination, setSearchValuePagination}) => {
   return (
     <WrapNavbar>
       <WrapInfo>
@@ -81,7 +81,7 @@ const NavBar = () => {
       </WrapInfo>
       <WrapAction>
         <ContainerAction>
-          <SearchBar />
+          <SearchBar handleSearchPagination={handleSearchPagination} setSearchValuePagination={setSearchValuePagination}/>
         </ContainerAction>
       </WrapAction>
     </WrapNavbar>
