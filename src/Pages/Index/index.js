@@ -8,7 +8,7 @@ import ErrorSearch from "../../components/ErrorSearch";
 const Index = () => {
   const [products, setProduct] = useState([]);
   const [pagination, setPagination] = useState({});
-  const [searchValuePagination, setSearchValuePagination] = useState(null)
+  const [searchValuePagination, setSearchValuePagination] = useState("")
   const [error, setError] = useState("");
 
   useEffect(() => {

@@ -48,6 +48,12 @@ const SearchBar = ({handleSearchPagination, setSearchValuePagination}) => {
     handleSearchPagination(1,searchValue);
   }
 
+  const handleGetSearchEnter = (e) => {
+    if(e.key === 'Enter'){
+      handleSearchPagination(1,searchValue);
+    }
+  }
+
   return (
     <WrapSearchBar>
       <ContainerSearchBar>
@@ -58,6 +64,7 @@ const SearchBar = ({handleSearchPagination, setSearchValuePagination}) => {
           placeholder="¿Qué estás buscando?"
           value={searchValue}
           onChange={handleSearchValue}
+          onKeyPress={handleGetSearchEnter}
         />
         <button
           id="searchQuerySubmit"
