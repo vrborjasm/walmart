@@ -12,12 +12,14 @@ The first step is to clone the repository with the following command:
 
 The second step is to install the application dependencies, for this you must use the console inside the app directory and run the following command:
 
-### `npm install`
+### `make build`
 
 The third step will be to run the following command:
 
-### `npm start`
+### `make up`
 
-Make sure the Back-end app and database are running before running the above command.
+The fourth step is to open another console with location in the root folder and execute the following command:
 
-# To run Docker Image
+### `database-setup`
+
+At the end of these steps you will find the application working with the front-end at http://localhost:3001/ and the server at http://localhost:3000/.
