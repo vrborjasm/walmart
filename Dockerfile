@@ -4,11 +4,11 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
+RUN npm install react@17.0.2
+RUN npm install react-scripts@5.0.0 -g
 RUN npm install
 
 COPY . .
 
-RUN npm install --silent
-RUN npm install react-scripts@5.0.0 -g --silent
-
 CMD ["npm", "start"]
+
