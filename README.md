@@ -8,7 +8,7 @@ It is necessary to have the Front-end application found in the following link ht
 
 The first step is to clone the repository with the following command:
 
-### `https://github.com/vrborjasm/walmartBackEnd.git`
+### `git clone https://github.com/vrborjasm/walmartFrontEnd.git`
 
 The second step is to install the application dependencies, for this you must use the console inside the app directory and run the following command:
 
@@ -16,7 +16,7 @@ The second step is to install the application dependencies, for this you must us
 
 The third step will be to run the following command:
 
-### `npm run start`
+### `npm start`
 
 Make sure the database is running before running the above command.
 
